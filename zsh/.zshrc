@@ -12,6 +12,8 @@ HISTFILE=~/.zsh_history
 autoload -Uz compinit
 compinit
 
+alias k=kubectl
+
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
@@ -30,12 +32,15 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 source <(kubectl completion zsh)
 source <(kustomize completion zsh)
 
 eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
