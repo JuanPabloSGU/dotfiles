@@ -16,20 +16,10 @@ end
 mason.setup()
 
 mason_lspconfig.setup({
-	ensure_installed = {
-		"bashls",
-		"dockerls",
-		"gopls",
-		"sumneko_lua",
-		"html",
-		"cssls",
-		"marksman",
-	},
+	ensure_installed = {},
 })
 
 mason_null_ls.setup({
-	ensure_installed = {
-		"stylua",
-	},
-	automatic_installation = true,
+	ensure_installed = {},
+	automatic_installation = false,
 })
