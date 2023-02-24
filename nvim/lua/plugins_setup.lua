@@ -23,6 +23,8 @@ if not status then
 	return
 end
 
+pcall(require, "impatient")
+
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
@@ -98,6 +100,16 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 
 	use("romgrk/barbar.nvim")
+
+	use("folke/which-key.nvim")
+
+	use("voldikss/vim-floaterm")
+
+	use("glepnir/dashboard-nvim")
+
+	use("kdheepak/lazygit.nvim")
+
+	use("lewis6991/impatient.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()

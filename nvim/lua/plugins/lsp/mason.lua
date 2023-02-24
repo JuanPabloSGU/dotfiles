@@ -16,10 +16,18 @@ end
 mason.setup()
 
 mason_lspconfig.setup({
-	ensure_installed = {},
+	ensure_installed = {
+		"bashls",
+		"dockerls",
+		"lua_ls",
+		"cssls",
+		"marksman",
+	},
 })
 
 mason_null_ls.setup({
-	ensure_installed = {},
-	automatic_installation = false,
+	ensure_installed = {
+		"stylua",
+	},
+	automatic_installation = true,
 })

@@ -33,3 +33,22 @@ keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
 keymap.set("n", "<leader>fs", "<cmd>Telescope grep_string<cr>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
+
+-- Floatterm
+keymap.set("n", "<M-[>", "<cmd>FloatermPrev<CR>")
+keymap.set("n", "<M-]>", "<cmd>FloatermNext<CR>")
+keymap.set("n", "<M-;>", "<cmd>FloatermKill<CR>")
+keymap.set("n", "<M-'>", "<cmd>FloatermNew<CR>")
+keymap.set("n", "<M-\\>", "<cmd>FloatermToggle<CR>")
+
+keymap.set("t", "<M-[>", "<cmd>FloatermPrev<CR>")
+keymap.set("t", "<M-]>", "<cmd>FloatermNext<CR>")
+keymap.set("t", "<M-;>", "<cmd>FloatermKill<CR>")
+keymap.set("t", "<M-'>", "<cmd>FloatermNew<CR>")
+keymap.set("t", "<M-\\>", "<cmd>FloatermToggle<CR>")
+
+-- Comment
+keymap.set("v", "<leader>/", "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>")
+
+-- LazyGit
+keymap.set("n", "<leader>gg", "<cmd>LazyGit<CR>")
