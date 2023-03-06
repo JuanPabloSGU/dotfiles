@@ -1,7 +1,7 @@
 [character]
 success_symbol = "[>](bold green)"
 error_symbol = "[x](bold red)"
-vicmd_symbol = "[<](bold green)"
+vimcmd_symbol = "[<](bold green)"
 
 [git_commit]
 tag_symbol = " tag "
@@ -12,6 +12,15 @@ behind = "<"
 diverged = "<>"
 renamed = "r"
 deleted = "x"
+
+[line_break]
+disabled = false
+
+[time]
+format = "$time($style) "
+use_12hr = false
+time_format = "%H:%M"
+disabled = false
 
 [aws]
 symbol = "aws "
@@ -58,11 +67,23 @@ symbol = "exs "
 [elm]
 symbol = "elm "
 
+[fennel]
+symbol = "fnl "
+
+[fossil_branch]
+symbol = "fossil "
+
 [git_branch]
 symbol = "git "
 
 [golang]
 symbol = "go "
+
+[gradle]
+symbol = "gradle "
+
+[guix_shell]
+symbol = "guix "
 
 [hg_branch]
 symbol = "hg "
@@ -81,9 +102,18 @@ symbol = "lua "
 
 [nodejs]
 symbol = "nodejs "
+detect_extensions = [""]
+detect_folders = ['node_modules']
 
 [memory_usage]
 symbol = "memory "
+style = "bold red "
+format = '[usage ${ram_pct}]($style) '
+threshold = 75
+disabled = false
+
+[meson]
+symbol = "meson "
 
 [nim]
 symbol = "nim "
@@ -94,6 +124,49 @@ symbol = "nix "
 [ocaml]
 symbol = "ml "
 
+[opa]
+symbol = "opa "
+
+[os.symbols]
+Alpine = "alp "
+Amazon = "amz "
+Android = "andr "
+Arch = "rch "
+CentOS = "cent "
+Debian = "deb "
+DragonFly = "dfbsd "
+Emscripten = "emsc "
+EndeavourOS = "ndev "
+Fedora = "fed "
+FreeBSD = "fbsd "
+Garuda = "garu "
+Gentoo = "gent "
+HardenedBSD = "hbsd "
+Illumos = "lum "
+Linux = "lnx "
+Macos = "mac "
+Manjaro = "mjo "
+Mariner = "mrn "
+MidnightBSD = "mid "
+Mint = "mint "
+NetBSD = "nbsd "
+NixOS = "nix "
+OpenBSD = "obsd "
+OpenCloudOS = "ocos "
+openEuler = "oeul "
+openSUSE = "osuse "
+OracleLinux = "orac "
+Pop = "pop "
+Raspbian = "rasp "
+Redhat = "rhl "
+RedHatEnterprise = "rhel "
+Redox = "redox "
+Solus = "sol "
+SUSE = "suse "
+Ubuntu = "ubnt "
+Unknown = "unk "
+Windows = "win "
+
 [package]
 symbol = "pkg "
 
@@ -102,6 +175,9 @@ symbol = "pl "
 
 [php]
 symbol = "php "
+
+[pijul_channel]
+symbol = "pijul "
 
 [pulumi]
 symbol = "pulumi "
@@ -127,6 +203,9 @@ symbol = "scala "
 [spack]
 symbol = "spack "
 
+[status]
+symbol = "[x](bold red) "
+
 [sudo]
 symbol = "sudo "
 
@@ -140,6 +219,5 @@ symbol = "terraform "
 symbol = "zig "
 
 [kubernetes]
-disabled=false
+disabled = false
 detect_files=['k8s']
-
