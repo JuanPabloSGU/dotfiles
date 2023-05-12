@@ -34,6 +34,9 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope grep_string<cr>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 
+-- which-key
+keymap.set("n", "<leader>wk", "<cmd>WhichKey<CR>")
+
 -- Floatterm
 keymap.set("n", "<M-[>", "<cmd>FloatermPrev<CR>")
 keymap.set("n", "<M-]>", "<cmd>FloatermNext<CR>")

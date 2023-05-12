@@ -32,3 +32,6 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.completeopt = "menu,menuone,noselect"
+
+vim.g.floaterm_width = 0.9
+vim.g.floaterm_height = 0.9
