@@ -109,7 +109,7 @@ detect_folders = ['node_modules']
 symbol = "memory "
 style = "bold red "
 format = '[usage ${ram_pct}]($style) '
-threshold = 75
+threshold = 50
 disabled = false
 
 [meson]
