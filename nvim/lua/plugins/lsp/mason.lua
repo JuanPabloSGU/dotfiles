@@ -20,6 +20,7 @@ mason_lspconfig.setup({
 		"bashls",
 		"dockerls",
 		"lua_ls",
+		"html",
 		"cssls",
 		"marksman",
 	},
